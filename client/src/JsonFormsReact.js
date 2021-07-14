@@ -14,16 +14,22 @@ export default function JsonFormsReact() {
         //Тут надо сходить за схемой на сервак, а пока сходим в соседнюю папку
         setJsonSchema(schema)    
     },[])
+    function submit(){
+        console.log(data)
+    }
     return (
-        <div style={{width:'50vw', margin:'0 auto'}}>
+        <div className="form">
             <JsonForms
                 schema={jsonSchema}
-                //uischema={uischema} тут может быть uischema, о которой я спрашивал
+                //тут может быть uischema, о которой я спрашивал
+                //uischema={uischema} 
                 data={data}
                 renderers={materialRenderers}
                 cells={materialCells}
                 onChange={({ data, _errors }) => setData(data)}
             />
+            <button className="submit" onClick={()=>submit()}>Submit</button>
         </div>
+        
     );
 }
