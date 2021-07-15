@@ -10,9 +10,11 @@ import { uischema } from './schemas/uischema';
 export default function JsonFormsReact() {
     const [jsonSchema,setJsonSchema] = useState({});
     const [data, setData] = useState({});
-    useEffect( async()=>{
-        //Тут надо сходить за схемой на сервак, а пока сходим в соседнюю папку
-        setJsonSchema(schema)    
+    useEffect(()=>{
+        return async()=>{
+            //Тут надо сходить за схемой на сервак, а пока сходим в соседнюю папку
+            setJsonSchema(schema)
+        }    
     },[])
     function submit(){
         console.log(data)

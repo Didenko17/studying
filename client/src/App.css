@@ -6,7 +6,6 @@
   background-color: #282c34;
   min-height: 10vh;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
@@ -14,8 +13,11 @@
 }
 
 a {
+  display: block;
+  margin: 10px;
   color: #61dafb;
   text-decoration: none;
+
 }
 
 a:hover{
@@ -41,4 +43,18 @@ a:hover{
 
 .submit:hover{
   background-color: rgb(40, 162, 189);
+}
+table, td, th {
+  border: 1px solid black;
+}
+thead{
+  background-color: #cacaca;;
+}
+td,th{
+  height: 5vh;
+  width: 10vw;
+}
+table{
+  margin: 30px auto;
+  border-collapse: collapse;
 }

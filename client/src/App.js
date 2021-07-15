@@ -1,6 +1,6 @@
-import logo from './logo.svg';
 import './App.css';
 import JsonFormsReact from './JsonFormsReact';
+import ExcelReact from './ExcelReact';
 
 import {
   BrowserRouter as Router,
@@ -14,9 +14,13 @@ function App() {
     <Router>
       <div className="App">
         <header className="App-header">
-          <Link to="/">Главная</Link>         
+          <Link to="/">Генерация форм</Link>
+          <Link to='/ExcelReact'>Работа с Excel</Link>         
         </header>
         <Switch>
+          <Route exact path='/ExcelReact'>
+            <ExcelReact/>
+          </Route>
           <Route path="/">
             <JsonFormsReact/>
           </Route>
